@@ -1,7 +1,37 @@
+@font-face {
+  font-family: Raleway;
+  src: url(Raleway/static/Raleway-Light.ttf);
+}
+
+@font-face {
+  font-family: AlegreyaSansSC;
+  src: url(Alegreya_Sans_SC/AlegreyaSansSC-Thin.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(Lato/Lato-Light.ttf);
+}
+
 body {
   display: flex;
     background-color: #94a6b8;
     justify-content: center;
+    background-image: url("background-pattern.jpg");
+    background-repeat: repeat repeat;
+}
+
+h1 {
+  font-family: AlegreyaSansSC;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: Raleway;
+  display: flex;
+  justify-content: center;
 }
 
 #container{
@@ -10,28 +40,92 @@ body {
   width: 500px;
 }
 
+#hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+#hero-image img {
+  width: 350px;
+}
+
 #content-box{
-  background: #d1d9e0;
+  background: rgba(191,201,209,.25);
   padding: 15px;
   margin-bottom: 15px;
+  font-family: Lato;
+  border-radius: 5px;
 }
+
+#slider {
+	overflow: hidden;
+}
+
+#slider figure {
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 10s slider infinite;
+}
+
+#slider figure img {
+	width: 20%;
+	float: left;
+}
+
+
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
 
 ul {
   list-style-type: none;
-  padding: 0px;
+  padding: 60px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   position: relative;
   margin-bottom: 20px;
 }
 
 a {
+  font-family: AlegreyaSansSC;
+  font-size: 20px;
   text-decoration: none;
-  padding: 15px;
+  padding: 10px;
+  margin: 20px;
 }
 
 a:hover{
   background: #d1d9e0;
+  border-radius: 5px;
 }
 
 a:link{
